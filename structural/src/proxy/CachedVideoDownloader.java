@@ -23,7 +23,7 @@ public class CachedVideoDownloader implements VideoDownloader{
         System.out.println("Cache miss. Downloading...");
         String video = realVideoDownloader.downloadVideo(videoURL);
         cache.put(videoURL, video);
-        return cache.get(video);
+        return video;
     }
 
 }
